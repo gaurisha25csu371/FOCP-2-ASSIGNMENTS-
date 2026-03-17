@@ -1,17 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
+    int rows = 8, cols = 8;
 
-    // This loop controls the number of lines
-    for (int i = 1; i <= 5; i++) {
-
-        // This loop prints numbers from 5 down to i
-        for (int j = 5; j >= i; j--) {
-            cout << j << " ";
+    for(int i = 1; i <= rows; i++)
+    {
+        for(int j = 1; j <= cols; j++)
+        {
+            if(i == 1 || i == rows || j == 1 || j == cols)
+                cout << "*";
+            else
+                cout << " ";
         }
-
-        // Move to the next line after printing one row
         cout << endl;
     }
 
